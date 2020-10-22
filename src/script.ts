@@ -34,8 +34,8 @@ const chunk = (arr, size) => {
   return result;
 };
 
-console.log(chunk(arr, 3));
-console.log(chunk(friends, 2));
+console.log("Chunk example 1 - " + chunk(arr, 3));
+console.log("Chunk example 2 - " + chunk(friends, 2));
 
 function func1(e) {
   return e % 2 == 0;
@@ -55,8 +55,8 @@ const filter = (arr, func) => {
   return result;
 };
 
-console.log(filter(arr, func1));
-console.log(filter(arr, func2));
+console.log("Filter example 1 - " + filter(arr, func1));
+console.log("Filter example 2 - " + filter(arr, func2));
 
 const sum = (arr) => {
   let sum = 0;
@@ -66,7 +66,7 @@ const sum = (arr) => {
   return sum;
 };
 
-console.log(sum(arr));
+console.log("Sum example - " + sum(arr));
 
 const find = (arr, search) => {
   for (let element of arr) {
@@ -77,7 +77,7 @@ const find = (arr, search) => {
   return "Element Not Found.";
 };
 
-console.log(find(arr, 4));
+console.log("Find example - " + find(arr, 4));
 
 const reduce = (arr, func, start) => {
   let ret = func(start, arr[0]);
@@ -88,20 +88,22 @@ const reduce = (arr, func, start) => {
 };
 
 console.log(
-  reduce(
-    arr,
-    function (a, e) {
-      return a + e;
-    },
-    0
-  )
+  "Reduce example 1 - " +
+    reduce(
+      arr,
+      function (a, e) {
+        return a + e;
+      },
+      0
+    )
 );
 console.log(
-  reduce(
-    friends,
-    function (a, e) {
-      return a + e.money;
-    },
-    0
-  )
+  "Reduce example 2 - " +
+    reduce(
+      friends,
+      function (a, e) {
+        return a + e.money;
+      },
+      0
+    )
 );

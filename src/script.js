@@ -32,8 +32,8 @@ var chunk = function (arr, size) {
     });
     return result;
 };
-console.log(chunk(arr, 3));
-console.log(chunk(friends, 2));
+console.log("Chunk example 1 - " + chunk(arr, 3));
+console.log("Chunk example 2 - " + chunk(friends, 2));
 function func1(e) {
     return e % 2 == 0;
 }
@@ -49,8 +49,8 @@ var filter = function (arr, func) {
     });
     return result;
 };
-console.log(filter(arr, func1));
-console.log(filter(arr, func2));
+console.log("Filter example 1 - " + filter(arr, func1));
+console.log("Filter example 2 - " + filter(arr, func2));
 var sum = function (arr) {
     var sum = 0;
     arr.forEach(function (element) {
@@ -58,7 +58,7 @@ var sum = function (arr) {
     });
     return sum;
 };
-console.log(sum(arr));
+console.log("Sum example - " + sum(arr));
 var find = function (arr, search) {
     for (var _i = 0, arr_1 = arr; _i < arr_1.length; _i++) {
         var element = arr_1[_i];
@@ -68,7 +68,7 @@ var find = function (arr, search) {
     }
     return "Element Not Found.";
 };
-console.log(find(arr, 4));
+console.log("Find example - " + find(arr, 4));
 var reduce = function (arr, func, start) {
     var ret = func(start, arr[0]);
     for (var i = 1; i < arr.length; i++) {
@@ -76,9 +76,11 @@ var reduce = function (arr, func, start) {
     }
     return ret;
 };
-console.log(reduce(arr, function (a, e) {
-    return a + e;
-}, 0));
-console.log(reduce(friends, function (a, e) {
-    return a + e.money;
-}, 0));
+console.log("Reduce example 1 - " +
+    reduce(arr, function (a, e) {
+        return a + e;
+    }, 0));
+console.log("Reduce example 2 - " +
+    reduce(friends, function (a, e) {
+        return a + e.money;
+    }, 0));
